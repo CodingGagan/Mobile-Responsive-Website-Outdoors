@@ -20,6 +20,7 @@ body {
 
 /* Header */
 
+
 .header {
   position: relative;
   height: 95vh;
@@ -96,12 +97,12 @@ body {
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0px 8px 20px $text-white;
+    box-shadow: 0px 8px 20px $text-dark;
   }
 
   &:active {
     transform: translateY(1px);
-    box-shadow: 0px 8px 10px $text-white;
+    box-shadow: 0px 8px 10px $text-dark;
   }
 
   &::after {
@@ -114,7 +115,7 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
-    transition: all 5s;
+    transition: all 0.5s;
   }
 
   &-white::after {
