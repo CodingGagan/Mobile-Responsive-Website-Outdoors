@@ -1,0 +1,206 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 30px; }
+
+/* Header */
+.header {
+  position: relative;
+  height: 95vh;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(18, 49, 34, 0.8), transparent), url("Images/header.jpg");
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  clip-path: polygon(100% 0, 100% 80%, 0 100%, 0 0); }
+
+.header__logo-box {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: 20px;
+  left: 20px; }
+
+.logo {
+  height: 100%;
+  width: 100%;
+  filter: grayscale(100%); }
+
+.header__primary-content {
+  position: absolute;
+  color: #ffffff;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+.mid-primary-content {
+  text-transform: uppercase;
+  margin-bottom: 120px;
+  backface-visibility: hidden; }
+
+.primary-main {
+  display: block;
+  letter-spacing: 30px;
+  font-size: 80px;
+  font-weight: 200;
+  animation: 1s fadeinleft ease-in; }
+
+.primary-sub {
+  display: block;
+  letter-spacing: 20px;
+  font-size: 23px;
+  font-weight: 200;
+  animation: 1s fadeinright ease-out; }
+
+.btn:link,
+.btn:visited {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 40px;
+  border-radius: 100px;
+  font-size: 20px; }
+
+.btn-white {
+  background-color: #ffffff;
+  color: #afafaf; }
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 20px #000; }
+
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 0px 8px 10px #000; }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 5s; }
+
+.btn-white::after {
+  background-color: #fff; }
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0; }
+
+.btn {
+  animation: 1s moveinbottom ease-out 0.75s backwards; }
+
+@keyframes moveinbottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+/* Header Section Animation */
+@keyframes fadeinleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  80% {
+    transform: translateX(20px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes fadeinright {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+/* Second Section */
+.mid_section {
+  height: 300px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+  background: red;
+  margin: 10px 0 50px 0; }
+
+.left_content, .right_content {
+  height: 100%;
+  display: flex; }
+
+.left_content {
+  background: green; }
+
+.left_content div {
+  margin: auto; }
+
+.right_content {
+  background: yellow; }
+
+.right_content .color_div {
+  margin: auto;
+  height: 80%;
+  width: 50%;
+  background: linear-gradient(to left bottom, green, lightgreen); }
+
+.parallax {
+  height: 400px;
+  background: url(Images/header.jpg);
+  background-size: cover;
+  background-position: center; }
+
+@media screen and (max-width: 1024px) {
+  .header {
+    height: 400px; }
+  .mid_section {
+    height: auto;
+    display: block; }
+  .left_content, .right_content {
+    height: 300px;
+    display: flex; }
+  .right_content .color_div {
+    width: 40%;
+    height: 50%; } }
+
+/* Media Queries */
+/* Header */
+/* change screen to 768 pixel */
+@media screen and (max-width: 1024px) {
+  .header {
+    height: 95vh; }
+  .logo-box {
+    height: 70px;
+    width: 70px;
+    top: 20px;
+    left: 20px; }
+  .primary-content {
+    top: 40%;
+    text-align: center; }
+  .mid-primary-content {
+    margin-bottom: 80px; }
+  .primary-main {
+    letter-spacing: 20px;
+    font-size: 40px;
+    font-weight: 200; }
+  .primary-sub {
+    letter-spacing: 9px;
+    font-size: 15px;
+    font-weight: 200; }
+  .btn {
+    padding: 12px 40px;
+    font-size: 18px; } }
