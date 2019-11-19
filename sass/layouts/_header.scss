@@ -1,0 +1,35 @@
+/* Header */
+
+.header {
+    position: relative;
+    height: 95vh;
+    background: linear-gradient(135deg, rgba($text-dark, 0.8), rgba($text-dark, 0.8), transparent),
+      url("Images/header.jpg");
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    clip-path: polygon(100% 0, 100% 80%, 0 100%, 0 0);
+  
+    &__logo-box {
+      position: absolute;
+      height: 100px;
+      width: 100px;
+      top: 20px;
+      left: 20px;
+    }
+  
+    &__logo {
+      height: 100%;
+      width: 100%;
+      filter: grayscale(100%);
+    }
+  
+    &__primary-content {
+      position: absolute;
+      color: $text-white;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  }

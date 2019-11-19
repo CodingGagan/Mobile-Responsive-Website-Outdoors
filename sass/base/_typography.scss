@@ -1,3 +1,28 @@
-$text-color-primary: #777; //grey
-$text-dark: #000;
-$text-white: #fff;
+body {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    padding: 30px;
+  }
+
+  .header__mid-primary-content {
+    text-transform: uppercase;
+    margin-bottom: 120px;
+    backface-visibility: hidden;
+
+    .primary-main {
+      display: block;
+      letter-spacing: 30px;
+      font-size: 8rem;
+      font-weight: 200;
+      animation: 1s fadeinleft ease-in;
+    }
+
+    .primary-sub {
+      display: block;
+      letter-spacing: 20px;
+      font-size: 2.3rem;
+      font-weight: 200;
+      animation: 1s fadeinright ease-out;
+    }
+  }
