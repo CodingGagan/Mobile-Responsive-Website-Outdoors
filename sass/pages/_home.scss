@@ -1,7 +1,33 @@
 .section-about {
-    background-color: $color-grey-light-1;
-    padding: 25rem 0;
-    margin-top: -25vh;
-    z-index: -1;
-    // clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  background-color: $color-grey-light-1;
+  padding: 25rem 0;
+  margin-top: -25vh;
+  z-index: -1;
+  // clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+// feature box
+.section-features {
+  padding: 20rem 0;
+  background: linear-gradient(to right bottom, rgba($primary-color-light, 0.8), rgba($primary-color-dark, 0.8)),
+    url("../../Images/main-section-image1.jpg");
+  margin-top: -10rem;
+  // simply skew the entire section like clip-path:;
+  transform: skewY(-7deg);
+
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+
+// Section tours
+.section-tours {
+  background-color: $color-grey-light-1;
+  padding: 25rem 0 15rem 0;
+  margin-top: -10rem;
+}
+
+.section-stories {
+  position: relative;
+  padding: 10rem 0;
 }
